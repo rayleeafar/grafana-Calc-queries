@@ -1,0 +1,35 @@
+{
+  "name": "CalcQueries",
+  "id": "grafana-Calcqueries-datasource",
+  "type": "datasource",
+
+  "metrics": true,
+  "mixed": true,
+  "hiddenQueries": true,
+
+  "queryOptions": {
+    "minInterval": true
+  },
+
+  "info": {
+    "version": "0.0.1",
+    "author": {
+      "name": "rayleeafar",
+      "url": "https://github.com/rayleeafar/grafana-Calc-queries"
+    },
+    "links": [
+      {
+        "name": "rayleeafar",
+        "url": "https://github.com/rayleeafar/grafana-Calc-queries"
+      }
+    ],
+    "logos": {
+      "small": "img/logo.png",
+      "large": "img/logo.png"
+    },
+    "dependencies": {
+      "grafanaVersion": "4.x.x",
+      "plugins": []
+    }
+  }
+}
