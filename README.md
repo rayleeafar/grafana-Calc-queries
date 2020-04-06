@@ -23,13 +23,13 @@ This plugin is built as a datasource plugin that combines and calc multi queries
 
 ```shell
 cd /var/lib/grafana/plugins
-sudo git clone git@github.com:GoshPosh/grafana-meta-queries.git
+sudo git clone https://github.com/rayleeafar/grafana-Calc-queries
 sudo service grafana-server restart
 ```
 
 # Usage
 
-- Create a datasource and select the Compare Calc Datasource plugin.
+- Create a datasource and select the grafana Calc Datasource plugin.
 - Create a basic arithmetic formula,click calc
 
 # Credits

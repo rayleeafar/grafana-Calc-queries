@@ -15,7 +15,11 @@
 
 # 安装
 
-将此项目克隆到 grafana plugins 目录中（如果使用软件包安装 grafana，则默认为/ var / lib / grafana / plugins）。 重新启动 grafana。
+```shell
+cd /var/lib/grafana/plugins
+sudo git clone https://github.com/rayleeafar/grafana-Calc-queries
+sudo service grafana-server restart
+```
 
 # 用法
 
