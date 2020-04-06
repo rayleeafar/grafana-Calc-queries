@@ -89,7 +89,8 @@ define(['angular', 'lodash', 'moment'], function(angular, _, moment) {
         }
 
         let rr = Promise.resolve({data: ret})
-        //console.log("calcPromises1.len",calcPromises.push(rr))
+        calcPromises.push(rr)
+        //console.log("calcPromises1.len",calcPromises.length)
         continue
       }
       //console.log("calcPromises2.len",calcPromises.length)
