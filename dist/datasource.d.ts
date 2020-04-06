@@ -1,2 +1,2 @@
-declare var CompareQueriesDatasource: any
-export { CompareQueriesDatasource }
+declare var CalcQueriesDatasource: any
+export { CalcQueriesDatasource }

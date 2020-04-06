@@ -2,7 +2,7 @@ define(['angular', 'lodash', 'moment'], function(angular, _, moment) {
   'use strict'
 
   /** @ngInject */
-  function CompareQueriesDatasource($q, datasourceSrv, templateSrv) {
+  function CalcQueriesDatasource($q, datasourceSrv, templateSrv) {
     this.datasourceSrv = datasourceSrv
     this.$q = $q
     this.templateSrv = templateSrv
@@ -411,6 +411,6 @@ define(['angular', 'lodash', 'moment'], function(angular, _, moment) {
 
   }
   return {
-    CompareQueriesDatasource: CompareQueriesDatasource
+    CalcQueriesDatasource: CalcQueriesDatasource
   }
 })

@@ -1,7 +1,7 @@
 {
-  "name": "grafana-compare-queries",
+  "name": "grafana-calc-queries",
   "version": "0.0.1",
-  "description": "Grafana plugin for Compare Queries",
+  "description": "Grafana plugin for Calc Queries",
   "main": "index.js",
   "scripts": {
     "build": "grunt",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AutohomeCorp/grafana-compare-queries"
+    "url": "https://github.com/rayleeafar/grafana-calc-queries"
   },
   "keywords": [
-    "Compare Queries"
+    "Calc Queries"
   ],
-  "author": "nfw",
+  "author": "ray@og",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AutohomeCorp/grafana-compare-queries/issues"
+    "url": "https://github.com/rayleeafar/grafana-calc-queries/issues"
   },
   "devDependencies": {
     "debug": "~2.6.9",
