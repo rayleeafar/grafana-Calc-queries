@@ -10,7 +10,7 @@ define(['angular', 'lodash', 'moment'], function(angular, _, moment) {
       return new Promise(function(resolve, reject) {
         resolve({
           status: 'success',
-          message: 'Compare Query Source is working correctly',
+          message: 'Calc Query Source is working correctly',
           title: 'Success'
         })
       })
@@ -28,7 +28,7 @@ define(['angular', 'lodash', 'moment'], function(angular, _, moment) {
 
         var promise = _this.datasourceSrv.get(dsName).then(function(ds) {
           if (ds.meta.id === _this.meta.id) {
-            return _this._compareQuery(options, targets, querys, _this)
+            return _this._calcQuery(options, targets, querys, _this)
           } else {
             opt.targets = targets
             return ds.query(opt)
@@ -60,11 +60,11 @@ define(['angular', 'lodash', 'moment'], function(angular, _, moment) {
       return result
     }
 
-    this._compareQuery = async function(options, targets, querys, _this) {
-      var comparePromises = []
-      //console.log('_compareQuery targets', targets)
+    this._calcQuery = async function(options, targets, querys, _this) {
+      var calcPromises = []
+      //console.log('_calcQuery targets', targets)
       for(var target of targets){
-        //console.log('_compareQuery target', target)
+        //console.log('_calcQuery target', target)
         if (target.query == null || target.query == '') {
           return
         }
@@ -89,16 +89,16 @@ define(['angular', 'lodash', 'moment'], function(angular, _, moment) {
         }
 
         let rr = Promise.resolve({data: ret})
-        //console.log("comparePromises1.len",comparePromises.push(rr))
+        //console.log("calcPromises1.len",calcPromises.push(rr))
         continue
       }
-      //console.log("comparePromises2.len",comparePromises.length)
-      Promise.all(comparePromises).then(function(values) {
+      //console.log("calcPromises2.len",calcPromises.length)
+      Promise.all(calcPromises).then(function(values) {
         //console.log("Promise.all",values);
       });
-      //console.log("comparePromises",comparePromises)
-      let rret = this.$q.all(comparePromises).then(function(results) {
-      // let rret = Promise.all(comparePromises).then(function(results) {
+      //console.log("calcPromises",calcPromises)
+      let rret = this.$q.all(calcPromises).then(function(results) {
+      // let rret = Promise.all(calcPromises).then(function(results) {
         //console.log("results",results)
           return {
             data: _.flatten(
@@ -134,9 +134,9 @@ define(['angular', 'lodash', 'moment'], function(angular, _, moment) {
         var comapreDsName = queryObj.datasource
 
         let tarData = await _this.datasourceSrv.get(comapreDsName)
-        let compareOptions = angular.copy(options)
-        compareOptions.targets = [queryObj]
-        tarData = await tarData.query(compareOptions)
+        let calcOptions = angular.copy(options)
+        calcOptions.targets = [queryObj]
+        tarData = await tarData.query(calcOptions)
         tarData.target="ray-"+querySymbol
         tarData.data[0].target="ray-"+querySymbol
         //console.log("tarData",tarData)

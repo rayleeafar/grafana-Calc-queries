@@ -1,6 +1,6 @@
 {
-  "name": "CalcQueries",
-  "id": "grafana-Calcqueries-datasource",
+  "name": "calcQueries",
+  "id": "grafana-calcqueries-datasource",
   "type": "datasource",
 
   "metrics": true,

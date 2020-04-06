@@ -3,7 +3,7 @@
 import angular from 'angular'
 import _ from 'lodash'
 
-export class CompareQueriesConfigCtrl {
+export class CalcQueriesConfigCtrl {
   static templateUrl = 'partials/config.html'
   current: any
 }
