@@ -10,7 +10,7 @@ define(['angular', 'lodash', 'moment'], function(angular, _, moment) {
       return new Promise(function(resolve, reject) {
         resolve({
           status: 'success',
-          message: 'Calc Query Source is working correctly',
+          message: 'Compare Query Source is working correctly',
           title: 'Success'
         })
       })
